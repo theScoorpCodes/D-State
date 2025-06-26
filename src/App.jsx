@@ -1,11 +1,20 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home, About, Profile, Signin, SignUp } from './pages'
 
 function App() {
   return (
-    <div className="flex items-center justify-center h-screen bg-red-100 text-red-800">
-      App
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
+
 
 export default App
